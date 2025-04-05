@@ -65,4 +65,5 @@ def export():
     return send_file(io.BytesIO(buffer.read().encode()), mimetype='text/csv', as_attachment=True, download_name='filtered_listings.csv')
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=False, host="0.0.0.0", port=10000)
+
