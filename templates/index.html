@@ -9,31 +9,31 @@
 </head>
 <body>
 
-  <!-- FULL-WIDTH INLINE FILTER BAR -->
+  <!-- FILTER BAR: SPREAD-OUT VERSION -->
   <div class="bg-light py-3 border-bottom">
     <div class="container-fluid px-4">
-      <form class="row gx-3 gy-2 align-items-center justify-content-between" method="get">
-        <div class="col-lg-2 col-md-3 col-6">
+      <form class="row align-items-center gx-3 gy-2" method="get">
+        <div class="col-lg-2 col-md-3 col-sm-6">
           <span class="fw-semibold text-success filter-title">Real Estate</span>
         </div>
 
-        <div class="col-lg-2 col-md-3 col-6">
+        <div class="col-lg-2 col-md-3 col-sm-6">
           <input type="text" name="suburb" class="form-control filter-input" placeholder="Suburb" value="{{ request.args.get('suburb', '') }}">
         </div>
 
-        <div class="col-lg-2 col-md-3 col-6">
+        <div class="col-lg-2 col-md-3 col-sm-6">
           <input type="number" name="min_price" class="form-control filter-input" placeholder="Min Price" value="{{ request.args.get('min_price', '') }}">
         </div>
 
-        <div class="col-lg-2 col-md-3 col-6">
+        <div class="col-lg-2 col-md-3 col-sm-6">
           <input type="number" name="min_beds" class="form-control filter-input" placeholder="Min Beds" value="{{ request.args.get('min_beds', '') }}">
         </div>
 
-        <div class="col-lg-2 col-md-3 col-6">
+        <div class="col-lg-2 col-md-3 col-sm-6">
           <button class="btn btn-success w-100 filter-button">Apply</button>
         </div>
 
-        <div class="col-lg-2 col-md-3 col-6">
+        <div class="col-lg-2 col-md-3 col-sm-6">
           <form action="/export" method="post">
             <button class="btn btn-outline-success w-100 filter-button" type="submit">Export CSV</button>
           </form>

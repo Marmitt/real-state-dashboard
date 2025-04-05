@@ -1,68 +1,65 @@
 body {
-    font-family: 'Segoe UI', sans-serif;
-    background-color: #f8f9fa;
-  }
-  
-  /* FILTER BAR STYLES */
-  .filter-title {
-    font-size: 1.6rem;
-    font-weight: 600;
-    white-space: nowrap;
-  }
-  
-  .filter-input {
-    font-size: 1rem;
-    padding: 0.5rem 0.75rem;
-    height: 38px;
-  }
-  
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f8f9fa;
+}
+
+.filter-title {
+  font-size: 1.6rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.filter-input {
+  font-size: 1rem;
+  padding: 0.5rem 0.75rem;
+  height: 38px;
+}
+
+.filter-button {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  height: 38px;
+}
+
+/* CARDS */
+.card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+}
+
+.card-title {
+  font-weight: bold;
+  color: #333;
+}
+
+.card-subtitle {
+  font-size: 0.9rem;
+  color: #777;
+}
+
+.card-img-top {
+  object-fit: cover;
+  height: 180px;
+}
+
+.btn-outline-success {
+  border-color: #5cb85c;
+  color: #5cb85c;
+}
+
+.btn-outline-success:hover {
+  background-color: #5cb85c;
+  color: #fff;
+}
+
+/* MOBILE RESPONSIVENESS */
+@media (max-width: 991px) {
+  .filter-input,
   .filter-button {
-    padding: 0.5rem 1rem;
-    font-size: 1rem;
-    height: 38px;
+    width: 100% !important;
   }
-  
-  /* CARDS */
-  .card {
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-  }
-  
-  .card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
-  }
-  
-  .card-title {
-    font-weight: bold;
-    color: #333;
-  }
-  
-  .card-subtitle {
-    font-size: 0.9rem;
-    color: #777;
-  }
-  
-  .card-img-top {
-    object-fit: cover;
-    height: 180px;
-  }
-  
-  /* BUTTON COLORS */
-  .btn-outline-success {
-    border-color: #5cb85c;
-    color: #5cb85c;
-  }
-  
-  .btn-outline-success:hover {
-    background-color: #5cb85c;
-    color: #fff;
-  }
-  
-  /* RESPONSIVE WRAP ON SMALL SCREENS */
-  @media (max-width: 991px) {
-    .filter-input,
-    .filter-button {
-      width: 100% !important;
-    }
-  }
-  
+}
