@@ -61,6 +61,42 @@
     {% if listings|length == 0 %}
       <p class="text-center text-muted mt-4">No listings match your filters.</p>
     {% endif %}
+
+    <!-- Chart Section -->
+    <div class="my-5">
+      <h3 class="text-center">📊 Average Price by Suburb</h3>
+      <canvas id="priceChart" height="100"></canvas>
+    </div>
   </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script>
+    const ctx = document.getElementById('priceChart').getContext('2d');
+    const chart = new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: {{ chart_labels | tojson }},
+        datasets: [{
+          label: 'Average Price ($)',
+          data: {{ chart_data | tojson }},
+          backgroundColor: 'rgba(54, 162, 235, 0.7)',
+          borderRadius: 6
+        }]
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          legend: { display: false }
+        },
+        scales: {
+          y: {
+            ticks: {
+              callback: value => '$' + value.toLocaleString()
+            }
+          }
+        }
+      }
+    });
+  </script>
 </body>
 </html>
