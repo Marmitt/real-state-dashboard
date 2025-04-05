@@ -3,32 +3,26 @@ body {
     background-color: #f8f9fa;
   }
   
-  #wrapper {
-    display: flex;
-    min-height: 100vh;
+  /* FILTER BAR STYLES */
+  .filter-title {
+    font-size: 1.6rem;
+    font-weight: 600;
+    white-space: nowrap;
   }
   
-  #sidebar {
-    width: 250px;
-    background: linear-gradient(to bottom right, #4caf50, #66bb6a);
-    padding: 1rem 0;
-    min-height: 100vh;
-    transition: all 0.3s ease;
+  .filter-input {
+    font-size: 1rem;
+    padding: 0.5rem 0.75rem;
+    height: 38px;
   }
   
-  #sidebar.collapsed {
-    margin-left: -250px;
+  .filter-button {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    height: 38px;
   }
   
-  .sidebar-heading {
-    font-size: 1.5rem;
-    color: white;
-  }
-  
-  #page-content-wrapper {
-    flex: 1;
-  }
-  
+  /* CARDS */
   .card {
     transition: transform 0.2s ease, box-shadow 0.2s ease;
   }
@@ -53,6 +47,7 @@ body {
     height: 180px;
   }
   
+  /* BUTTON COLORS */
   .btn-outline-success {
     border-color: #5cb85c;
     color: #5cb85c;
@@ -61,5 +56,13 @@ body {
   .btn-outline-success:hover {
     background-color: #5cb85c;
     color: #fff;
+  }
+  
+  /* RESPONSIVE WRAP ON SMALL SCREENS */
+  @media (max-width: 991px) {
+    .filter-input,
+    .filter-button {
+      width: 100% !important;
+    }
   }
   
