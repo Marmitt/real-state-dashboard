@@ -10,7 +10,7 @@ body {
   
   #sidebar {
     width: 250px;
-    background: linear-gradient(to bottom, #2e7d32, #66bb6a);
+    background: linear-gradient(to bottom right, #deeef1, #94b8b8);
     padding: 1rem 0;
     min-height: 100vh;
     color: white;
