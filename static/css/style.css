@@ -10,15 +10,23 @@ body {
   
   #sidebar {
     width: 250px;
-    background: linear-gradient(to bottom right, #deeef1, #94b8b8);
+    background: linear-gradient(to bottom right, #4caf50, #66bb6a);
     padding: 1rem 0;
     min-height: 100vh;
-    color: white;
+    transition: all 0.3s ease;
+  }
+  
+  #sidebar.collapsed {
+    margin-left: -250px;
   }
   
   .sidebar-heading {
     font-size: 1.5rem;
     color: white;
+  }
+  
+  #page-content-wrapper {
+    flex: 1;
   }
   
   .card {
